@@ -1,0 +1,146 @@
+{
+    "name": "kuntaliitto/kuntaliitto",
+    "description": "Kuntafi base template build with Drupal 8",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin/"
+    },
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Antti Tuppurainen",
+            "email": "antti.tuppurainen@industry62.com"
+        },
+        {
+            "name": "Mikko Malmgren",
+            "email": "mikko.malmgren@kuntaliitto.fi"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "harvesthq/chosen",
+                "version": "1.6.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.6.1/chosen_v1.6.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "^1.2.0"
+                }
+            }
+        }
+    ],
+    "require": {        
+        "drupal/core": "^8.5.7",
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "drupal/allowed_formats": "1.x-dev",
+        "drupal/chosen": "~2.2",
+        "drupal/embed": "~1.0",
+        "drupal/facets": "~1.0",
+        "drupal/link_attributes": "~1.0",
+        "drupal/linkit": "5.0.0-beta6 as 4.0",
+        "harvesthq/chosen": "^1.6",
+        "wunderio/drupal-ping": "^1.0"
+    },
+    "require-dev": {},
+    "extra": {
+        "dropin-paths": {
+            "docroot/": [
+                "type:web-dropin"
+            ]
+        },
+        "enable-patching": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "Allow profiles to provide a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/1356278-408--8.5.x-real.patch"
+            }
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "merge-plugin": {
+            "require": [
+                "kuntaliittofi/composer.profile.json",
+                "kuntaliittofi/composer.server.json"
+            ],
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": true,
+            "replace": false,
+            "ignore-duplicates": true
+        },
+        "scripts": {
+            "dependency-cleanup": [
+                "KuntaFi\\composer\\ScriptHandler::dependencyCleanup"
+            ],
+            "drupal-scaffold": "KuntaFi\\DrupalScaffold\\Plugin::scaffold",
+            "post-install-cmd": [
+                "KuntaFi\\composer\\ScriptHandler::buildScaffold",
+                "KuntaFi\\composer\\ScriptHandler::createRequiredFiles"
+            ],
+            "post-update-cmd": [
+                "KuntaFi\\composer\\ScriptHandler::buildScaffold",
+                "KuntaFi\\composer\\ScriptHandler::createRequiredFiles"
+            ]
+        }
+    },
+    "replace": {
+        "burdamagazinorg/infinite_theme": "*",
+        "burdamagazinorg/infinite_module": "*",
+        "drupal/ivw_integration": "*",
+        "drupal/nexx_integration": "*",
+        "drupal/riddle_marketplace": "*",
+        "valiton/harbourmaster": "*",
+        "drupal/adsense": "*",
+        "drupal/liveblog": "*"
+    }
+}

@@ -1,0 +1,34 @@
+name: Kuntaliitto
+type: profile
+description: 'The Drupal 8 pohjainen sisällönhallintajärjestelmä (CMS) kunnille, maakunnille ja sote-kuntayhtymille'
+core: 8.x
+package: Kuntaliitto
+distribution:
+  name: Kuntaliitto
+
+base profile:
+  name: thunder
+
+dependencies:
+  - action
+  - allowed_formats
+  - better_exposed_filters
+  - chosen
+  - chosen_lib
+  - config_translation
+  - content_translation
+  - datetime_range
+  - embed
+  - entity_embed
+  - facets
+  - facets_summary
+  - fb_instant_articles
+  - hal
+  - help
+  - link_attributes
+  - locale
+  - media_entity_document
+  - rest
+  - serialization
+  - thunder_fia
+  - update

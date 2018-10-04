@@ -1,0 +1,119 @@
+{
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "drupal/config_split": "^1.0.0",
+    "drupal/audiofield": "^1.6",
+    "drupal/simple_sitemap": "^2",
+    "drupal/purge": "^3",
+    "drupal/varnish_purge": "1.11",
+    "drupal/paragraphs_asymmetric_translation_widgets": "dev-1.x#e676e682fd30c123fff1e863716b6792516bb11a",
+    "drupal/media_entity": "^1.6",
+    "drupal/media_entity_image": "^1",
+    "drupal/entity_browser": "^1",
+    "drupal/search_api": "^1",
+    "drupal/menu_block": "^1.4",
+    "drupal/file_entity": "^2",
+    "drupal/media_entity_document": "^1",
+    "drupal/media_entity_video": "^1@beta",
+    "drupal/inline_entity_form": "1.0-rc1",
+    "drupal/url_embed": "1.x-dev",
+    "drupal/video_embed_field": "^1",
+    "drupal/entity_embed": "^1",
+    "drupal/scheduler": "^1",
+    "drupal/search_api_solr": "^1",
+    "drupal/better_exposed_filters": "^3",
+    "drupal/views_field_view": "1.x-dev",
+    "drupal/views_ef_fieldset": "1.x-dev",
+    "drupal/content_language_access": "^1",
+    "drupal/search_api_autocomplete": "^1",
+    "drupal/search_api_solr_multilingual": "^1",
+    "drupal/views_autocomplete_filters": "^1",
+    "drupal/anchor_link": "^1",
+    "drupal/inline_responsive_images": "^2.1",
+    "drupal/webform": "5.0-rc16",
+    "drupal/honeypot": "^1",
+    "drupal/block_field": "1.0-alpha4",
+    "drupal/responsive_share_buttons": "1.x-dev",
+    "drupal/easy_breadcrumb": "^1.6",
+    "drupal/field_group_link": "^1",
+    "drupal/ajax_comments": "1.0-beta1",
+    "drupal/subpathauto": "1.0-beta1",
+    "drupal/r4032login": "1.0-beta2",
+    "drupal/entity_reference_revisions": "^1",
+    "drupal/redirect": "^1.0",
+    "drupal/realname": "1.x-dev",
+    "drupal/menu_multilingual": "1.x-dev#f4106e7",
+    "drupal/warden": "^1.0",
+    "drupal/memcache": "^2.0@alpha",
+    "drupal/ultimate_cron": "^2.0@alpha",
+    "drupal/imagemagick": "^1.0@alpha",
+    "drupal/override_node_options": "^2.0",
+    "drupal/smart_trim": "^1.0",
+    "drupal/search_api_exclude_entity": "^1.0@alpha",
+    "drupal/layout_plugin": "^1.0@alpha",
+    "drupal/viewfield": "^3.0@alpha",
+    "drupal/swiftmailer": "^1.0@beta",
+    "drupal/extlink": "^1.0",
+    "drupal/eu_cookie_compliance": "^1.0@beta",
+    "drupal/config_installer": "^1.8",
+    "drupal/default_content": "^1.0@alpha",
+    "drupal/entity_usage": "2.0-alpha4"
+  },
+  "require-dev": {
+    "behat/behat": ">=3.1 <3.4",
+    "behat/mink": "~1.7",
+    "behat/mink-selenium2-driver": "^1.3.1",
+    "bex/behat-screenshot": "^1.2",
+    "drupal/drupal-extension": "~3.2",
+    "drupal-composer/drupal-scaffold": "^2.1.0",
+    "jarnaiz/behat-junit-formatter": "^1.3.2",
+    "se/selenium-server-standalone": "^2.53",
+    "jakoch/phantomjs-installer":   "2.1.1-p07",
+    "dmore/behat-chrome-extension": "^1.0.0",
+    "mikey179/vfsStream": "~1.2",
+    "sensiolabs-de/deprecation-detector": "dev-master"
+  },
+  
+  "extra": {
+    "composer-exit-on-patch-failure": true,
+    "drupal-scaffold": {
+      "initial": {
+        "sites/default/default.services.yml": "sites/default/services.yml",
+        "sites/default/default.settings.php": "sites/default/settings.php"
+      }
+    },
+    "enable-patching": true,
+    "patches": {
+      "drupal/core": {
+        "Allow install profile disable": "https://www.drupal.org/files/issues/install-profile-1170362-235.patch",
+        "Make entity reference work with views": "https://www.drupal.org/files/issues/2174633-174.patch",
+        "More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/more_link_disappears-1819538-24.patch",
+        "Widget fix": "https://www.drupal.org/files/issues/2614250-36.patch",
+        "Limiting options for exposed Language filters": "https://www.drupal.org/files/issues/drupal-exposed-language-filter-errors-2693727-1.patch",
+        "Escape markup in forms": "https://www.drupal.org/files/issues/2652850-17.patch",
+        "Allow redirects": "https://www.drupal.org/files/issues/2643466-10.patch",
+        "Ajax views leave obsolete Drupal.Ajax instances": "https://www.drupal.org/files/issues/2018-03-31/drupal_ajax.patch",
+        "Path alias filter by system path": "https://www.drupal.org/files/issues/2018-03-24/path_alias_filter_by-2418755-69.patch",
+        "Make Book navigation translatable": "https://www.drupal.org/files/issues/book-navigation-translatable-2470896-26.patch"
+      },
+      "drupal/ctools": {
+        "Autosubmit for view filters": "https://www.drupal.org/files/issues/2475595-ctools-autocomplete-fix-24.patch",
+        "Block.php notices and warnings": "https://www.drupal.org/files/issues/fixblockpager-2820783-21.patch"
+      },
+      "drupal/inline_responsive_images": {
+        "Two validation callbacks fired": "https://www.drupal.org/files/issues/inline_responsive_images-validator-fix-2830261-2.patch"
+      },
+      "drupal/inline_entity_form": {
+        "Add entity reference in translation": "https://www.drupal.org/files/issues/2018-06-21/inline_entity_form-support_adding_new_entities_when_translating-2822764-32.patch"
+      },
+      "drupal/scheduler": {
+        "Scheduler integration with core Content moderation": "https://www.drupal.org/files/issues/2018-08-02/2798689-102.patch"
+      }
+    }
+  }
+}

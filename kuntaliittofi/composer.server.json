@@ -1,0 +1,23 @@
+{
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "drupal/purge": "^3",
+    "drupal/varnish_purge": "1.11",
+    "drupal/warden": "^1.0",
+    "drupal/memcache": "^2.0@alpha",
+    "drupal/ultimate_cron": "^2.0@alpha",
+    "drupal/imagemagick": "^1.0@alpha"
+  },
+  "extra": {
+    "patches": {
+      "drupal/core": {
+        "Clear Twig caches on deploys": "https://www.drupal.org/files/issues/2752961-130.patch"
+      }
+    }
+  }
+}
