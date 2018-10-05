@@ -1,5 +1,0 @@
-name: kuntaliitto-fi-base
-recipe: drupal8
-config:
-  php: '7.1'
-  webroot: docroot
