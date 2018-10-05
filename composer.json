@@ -29,6 +29,10 @@
             "url": "https://asset-packagist.org"
         },
         {
+            "type": "vcs",
+            "url": "git@github.com:Kuntaliitto/kuntaliitto.fi"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "harvesthq/chosen",
