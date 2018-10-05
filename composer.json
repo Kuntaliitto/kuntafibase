@@ -1,5 +1,5 @@
 {
-    "name": "kuntaliitto/kuntaliitto.fi",
+    "name": "kuntaliitto/kuntafi-base",
     "description": "Kuntafi base template build with Drupal 8",
     "type": "project",
     "minimum-stability": "dev",
@@ -27,10 +27,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:Kuntaliitto/kuntaliitto.fi"
         },
         {
             "type": "package",
