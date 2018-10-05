@@ -11,9 +11,15 @@
     "drupal/warden": "^1.0",
     "drupal/memcache": "^2.0@alpha",
     "drupal/ultimate_cron": "^2.0@alpha",
-    "drupal/imagemagick": "^1.0@alpha"
+    "drupal/imagemagick": "^1.0@alpha",
+    "wunderio/drupal-ping": "^1.0"
   },
   "extra": {
+    "dropin-paths": {
+      "docroot/": [
+        "type:web-dropin"
+      ]
+    },
     "patches": {
       "drupal/core": {
         "Clear Twig caches on deploys": "https://www.drupal.org/files/issues/2752961-130.patch"
