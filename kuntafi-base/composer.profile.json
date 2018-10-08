@@ -88,6 +88,9 @@
       }
     },
     "enable-patching": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
     "patches": {
       "drupal/core": {
         "Allow install profile disable": "https://www.drupal.org/files/issues/install-profile-1170362-235.patch",
