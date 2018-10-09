@@ -1,5 +1,5 @@
 {
-    "name": "kuntaliitto/kuntafi-base",
+    "name": "kuntaliitto/kuntafibase",
     "description": "Kuntafi base template build with Drupal 8",
     "type": "drupal-profile",
     "minimum-stability": "dev",
@@ -92,8 +92,8 @@
         },
         "merge-plugin": {
             "require": [
-                "kuntafi-base/composer.profile.json",
-                "kuntafi-base/composer.server.json"
+                "kuntafi/composer.profile.json",
+                "kuntafi/composer.server.json"
             ],
             "merge-extra": true,
             "merge-extra-deep": true,
@@ -101,20 +101,7 @@
             "replace": false,
             "ignore-duplicates": true
         },
-        "scripts": {
-            "dependency-cleanup": [
-                "KuntaFi\\composer\\ScriptHandler::dependencyCleanup"
-            ],
-            "drupal-scaffold": "KuntaFi\\DrupalScaffold\\Plugin::scaffold",
-            "post-install-cmd": [
-                "KuntaFi\\composer\\ScriptHandler::buildScaffold",
-                "KuntaFi\\composer\\ScriptHandler::createRequiredFiles"
-            ],
-            "post-update-cmd": [
-                "KuntaFi\\composer\\ScriptHandler::buildScaffold",
-                "KuntaFi\\composer\\ScriptHandler::createRequiredFiles"
-            ]
-        }
+
     },
     "replace": {
         "burdamagazinorg/infinite_theme": "*",

@@ -1,10 +1,10 @@
-name: Kuntaliitto
+name: Kuntafibase
 type: profile
 description: 'The Drupal 8 pohjainen sisällönhallintajärjestelmä (CMS) kunnille, maakunnille ja sote-kuntayhtymille'
 core: 8.x
-package: Kuntaliitto
+package: Kuntafibase
 distribution:
-  name: Kuntaliitto
+  name: Kuntafibase
 
 base profile:
   name: thunder

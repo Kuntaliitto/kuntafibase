@@ -11,6 +11,6 @@
  *
  * @see system_install()
  */
-function kuntaliitto_install() {
+function kuntafibase_install() {
   drupal_get_messages();
 }
