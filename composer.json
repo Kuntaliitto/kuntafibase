@@ -100,8 +100,7 @@
             "merge-scripts": true,
             "replace": false,
             "ignore-duplicates": true
-        },
-
+        }
     },
     "replace": {
         "burdamagazinorg/infinite_theme": "*",
