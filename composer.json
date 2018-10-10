@@ -92,8 +92,8 @@
         },
         "merge-plugin": {
             "require": [
-                "kuntafi/composer.profile.json",
-                "kuntafi/composer.server.json"
+                "kuntafibase/composer.profile.json",
+                "kuntafibase/composer.server.json"
             ],
             "merge-extra": true,
             "merge-extra-deep": true,
