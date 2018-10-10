@@ -45,7 +45,7 @@
         }
     ],
     "require": {        
-        "wikimedia/composer-merge-plugin": "dev-master",
+        "wikimedia/composer-merge-plugin": "^1.4.1",
         "drupal/allowed_formats": "1.x-dev",
         "drupal/better_exposed_filters": "^3.0",
         "drupal/chosen": "~2.2",
