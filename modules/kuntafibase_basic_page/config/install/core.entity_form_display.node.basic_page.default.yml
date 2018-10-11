@@ -2,21 +2,43 @@ langcode: fi
 status: true
 dependencies:
   config:
+    - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_paragraphs
     - node.type.basic_page
   module:
+    - entity_reference_revisions
     - path
     - scheduler
+    - text
 id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
 mode: default
 content:
+  body:
+    weight: 121
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_paragraphs:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 2

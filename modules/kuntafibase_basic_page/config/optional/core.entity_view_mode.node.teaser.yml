@@ -4,6 +4,6 @@ dependencies:
   module:
     - node
 id: node.teaser
-label: Lyhennelmä
+label: Teaser
 targetEntityType: node
 cache: true
