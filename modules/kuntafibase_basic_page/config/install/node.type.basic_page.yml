@@ -1,6 +1,9 @@
 langcode: fi
 status: true
-dependencies:
+dependencies:  
+  enforced:
+    module:
+      - kuntafibase_basic_page
   module:
     - menu_ui
     - scheduler

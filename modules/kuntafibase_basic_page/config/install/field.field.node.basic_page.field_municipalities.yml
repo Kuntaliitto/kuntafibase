@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies:
+dependencies:  
+  enforced:
+    module:
+      - kuntafibase_basic_page
   config:
     - field.storage.node.field_municipalities
     - node.type.basic_page
