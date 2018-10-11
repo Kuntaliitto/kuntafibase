@@ -30,5 +30,7 @@ dependencies:
   - media_entity_document
   - rest
   - serialization
+  - search_api
+  - search_api_exclude_entity
   - thunder_fia
   - update
