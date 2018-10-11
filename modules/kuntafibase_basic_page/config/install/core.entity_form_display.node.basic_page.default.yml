@@ -3,14 +3,36 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_channel
+    - field.field.node.basic_page.field_municipalities
     - field.field.node.basic_page.field_paragraphs
     - field.field.node.basic_page.field_seo_title
+    - field.field.node.basic_page.field_tags
+    - field.field.node.basic_page.field_target_groups
     - node.type.basic_page
   module:
+    - field_group
     - paragraphs
     - path
     - scheduler
     - text
+third_party_settings:
+  field_group:
+    group_taxonomy:
+      children:
+        - field_channel
+        - field_target_groups
+        - field_municipalities
+        - field_tags
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: content-form__form-section
+        description: ''
+        required_fields: true
+      label: Taxonomy
 id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
@@ -31,6 +53,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_channel:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_municipalities:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
   field_paragraphs:
     weight: 15
     settings:
@@ -56,6 +96,24 @@ content:
           optimax: 50
           tolerance: 10
     type: string_textfield
+    region: content
+  field_tags:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_target_groups:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
     region: content
   langcode:
     type: language_select

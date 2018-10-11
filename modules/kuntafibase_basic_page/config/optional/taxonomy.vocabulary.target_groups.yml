@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Target groups'
+vid: target_groups
+description: ''
+hierarchy: 0
+weight: 0

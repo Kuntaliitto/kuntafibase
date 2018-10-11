@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Municipalities
+vid: municipalities
+description: ''
+hierarchy: 0
+weight: 0
