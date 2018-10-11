@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basic_article.body
+    - node.type.basic_article
+  module:
+    - text
+    - user
+id: node.basic_article.default
+targetEntityType: node
+bundle: basic_article
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  shariff_field: true

@@ -1,0 +1,7 @@
+name: 'kuntafibase basic article'
+type: module
+description: 'Basic article supporting multichannel and multitype content'
+core: 8.x
+package: 'Kuntafibase'
+dependencies:
+  - paragraphs

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains kuntafibase_basic_article.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kuntafibase_basic_article_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntafibase_basic_article module.
+    case 'help.page.kuntafibase_basic_article':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Basic article supporting multichannel and multitype content') . '</p>';
+      return $output;
+
+    default:
+  }
+}

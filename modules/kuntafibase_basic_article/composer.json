@@ -1,0 +1,14 @@
+{
+  "name": "drupal/kuntafibase_basic_article",
+  "type": "drupal-module",
+  "description": "Basic article supporting multichannel and multitype content",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/kuntafibase_basic_article",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/kuntafibase_basic_article",
+    "source": "http://cgit.drupalcode.org/kuntafibase_basic_article"
+  },
+  "require": { }
+}
