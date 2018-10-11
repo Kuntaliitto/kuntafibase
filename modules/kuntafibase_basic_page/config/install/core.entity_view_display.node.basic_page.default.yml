@@ -1,0 +1,18 @@
+langcode: fi
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+  module:
+    - user
+id: node.basic_page.default
+targetEntityType: node
+bundle: basic_page
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  shariff_field: true

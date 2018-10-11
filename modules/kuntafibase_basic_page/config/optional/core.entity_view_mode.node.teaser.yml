@@ -1,0 +1,9 @@
+langcode: fi
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser
+label: Lyhennelmä
+targetEntityType: node
+cache: true

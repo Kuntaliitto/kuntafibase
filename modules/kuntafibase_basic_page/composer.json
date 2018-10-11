@@ -1,0 +1,14 @@
+{
+  "name": "drupal/kuntafibase_basic_page",
+  "type": "drupal-module",
+  "description": "Basic page supporting paragraphs and menu",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/kuntafibase_basic_page",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/kuntafibase_basic_page",
+    "source": "http://cgit.drupalcode.org/kuntafibase_basic_page"
+  },
+  "require": { }
+}
