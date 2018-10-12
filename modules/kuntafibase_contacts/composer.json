@@ -1,0 +1,14 @@
+{
+  "name": "drupal/kuntafibase_contacts",
+  "type": "drupal-module",
+  "description": "Contact directory, AD people etc",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/kuntafibase_contacts",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/kuntafibase_contacts",
+    "source": "http://cgit.drupalcode.org/kuntafibase_contacts"
+  },
+  "require": { }
+}

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains kuntafibase_contacts.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kuntafibase_contacts_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntafibase_contacts module.
+    case 'help.page.kuntafibase_contacts':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Contact directory, AD people etc') . '</p>';
+      return $output;
+
+    default:
+  }
+}
