@@ -5,6 +5,7 @@
  * Contains kuntafibase_contacts.module.
  */
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -20,5 +21,22 @@ function kuntafibase_contacts_help($route_name, RouteMatchInterface $route_match
       return $output;
 
     default:
+  }
+}
+/**
+ * We don't display title field in contact information in form, 
+ * so we generate title on the fly.
+ * 
+ * Implements hook_entity_presave().
+ */
+function kuntafibase_contacts_entity_presave(EntityInterface $entity) {
+  if ($entity->bundle() == 'contact') {
+    $entity_array = $entity->toArray();
+    if (isset($entity_array['field_c_first_name']) && isset($entity_array['field_c_first_name'])) {
+      /** @var Drupal\Node\Entity\Node $entity */
+      $title_value = $entity->get('field_c_first_name')->getString() . ' ';
+      $title_value .= $entity->get('field_c_surname')->getString();
+      $entity->set('title', $title_value);
+    }
   }
 }
