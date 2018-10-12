@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Division
+vid: division
+description: 'Taxonomy for contact information'
+hierarchy: 0
+weight: 0

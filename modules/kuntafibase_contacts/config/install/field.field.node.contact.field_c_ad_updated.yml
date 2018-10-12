@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_c_ad_updated
+    - node.type.contact
+id: node.contact.field_c_ad_updated
+field_name: field_c_ad_updated
+entity_type: node
+bundle: contact
+label: 'Updated from AD'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

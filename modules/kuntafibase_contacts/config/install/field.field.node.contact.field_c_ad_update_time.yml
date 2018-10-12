@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_c_ad_update_time
+    - node.type.contact
+  module:
+    - datetime
+id: node.contact.field_c_ad_update_time
+field_name: field_c_ad_update_time
+entity_type: node
+bundle: contact
+label: 'Update time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
