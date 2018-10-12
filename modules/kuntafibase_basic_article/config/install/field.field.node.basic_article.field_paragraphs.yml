@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.basic_article
+  module:
+    - entity_reference_revisions
+id: node.basic_article.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: basic_article
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      gallery:
+        weight: 10
+        enabled: false
+      image:
+        weight: 11
+        enabled: false
+      instagram:
+        weight: 12
+        enabled: false
+      link:
+        weight: 13
+        enabled: false
+      pinterest:
+        weight: 14
+        enabled: false
+      quote:
+        weight: 15
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+      twitter:
+        weight: 17
+        enabled: false
+      video:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions
