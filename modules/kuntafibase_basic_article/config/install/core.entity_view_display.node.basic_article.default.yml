@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.basic_article.body
     - field.field.node.basic_article.field_channel
+    - field.field.node.basic_article.field_contact
     - field.field.node.basic_article.field_municipalities
     - field.field.node.basic_article.field_paragraphs
     - field.field.node.basic_article.field_seo_title
@@ -34,6 +35,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_contact:
+    type: entity_reference_revisions_entity_view
+    weight: 109
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_municipalities:
     weight: 104

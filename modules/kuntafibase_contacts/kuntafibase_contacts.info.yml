@@ -2,4 +2,12 @@ name: 'kuntafibase contacts'
 type: module
 description: 'Contact directory, AD people etc'
 core: 8.x
+dependencies:
+  - empty_fields
+  - entity_browser
+  - field
+  - node
+  - paragraphs
+  - user
+  - views
 package: 'Kuntafibase'

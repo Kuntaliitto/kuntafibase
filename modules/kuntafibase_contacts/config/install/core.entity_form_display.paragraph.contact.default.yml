@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.contacts
+    - field.field.paragraph.contact.field_contact
+    - paragraphs.paragraphs_type.contact
+  module:
+    - entity_browser
+id: paragraph.contact.default
+targetEntityType: paragraph
+bundle: contact
+mode: default
+content:
+  field_contact:
+    weight: 0
+    settings:
+      entity_browser: contacts
+      field_widget_display: label
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -4,6 +4,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.basic_article.body
+    - field.field.node.basic_article.field_channel
+    - field.field.node.basic_article.field_municipalities
+    - field.field.node.basic_article.field_paragraphs
+    - field.field.node.basic_article.field_seo_title
+    - field.field.node.basic_article.field_tags
+    - field.field.node.basic_article.field_target_groups
+    - field.field.node.basic_article.field_type
     - node.type.basic_article
   module:
     - text
@@ -25,5 +32,12 @@ content:
     weight: 100
     region: content
 hidden:
+  field_channel: true
+  field_municipalities: true
+  field_paragraphs: true
+  field_seo_title: true
+  field_tags: true
+  field_target_groups: true
+  field_type: true
   langcode: true
   shariff_field: true

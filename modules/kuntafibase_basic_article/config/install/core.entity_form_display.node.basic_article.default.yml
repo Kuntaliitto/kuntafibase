@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.basic_article.body
     - field.field.node.basic_article.field_channel
+    - field.field.node.basic_article.field_contact
     - field.field.node.basic_article.field_municipalities
     - field.field.node.basic_article.field_paragraphs
     - field.field.node.basic_article.field_seo_title
@@ -41,7 +42,7 @@ third_party_settings:
         - field_municipalities
         - field_tags
       parent_name: ''
-      weight: 14
+      weight: 15
       format_type: fieldset
       format_settings:
         id: ''
@@ -49,6 +50,30 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Taxonomy
+    group_liftups:
+      children:
+        - field_paragraphs
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: content-form__form-section
+        description: ''
+        required_fields: true
+      label: Liftups
+    group_contact_information:
+      children:
+        - field_contact
+      parent_name: ''
+      weight: 14
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: content-form__form-section
+        description: ''
+        required_fields: true
+      label: 'Contact information'
 id: node.basic_article.default
 targetEntityType: node
 bundle: basic_article
@@ -78,6 +103,24 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
     region: content
+  field_contact:
+    type: paragraphs
+    weight: 26
+    settings:
+      title: contact
+      title_plural: contacts
+      edit_mode: open
+      closed_mode: preview
+      autocollapse: none
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: contact
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
   field_municipalities:
     weight: 16
     settings:
@@ -88,7 +131,7 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_paragraphs:
-    weight: 13
+    weight: 14
     settings:
       title: Paragraph
       title_plural: Paragraphs

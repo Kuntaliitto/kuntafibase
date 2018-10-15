@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.contacts
+  module:
+    - views
+name: contacts
+label: Contacts
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: Select
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  1045c8f6-dcfd-4ce2-a5e2-c218b6fa250f:
+    settings:
+      view: contacts
+      view_display: entity_browser_contacts
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 1045c8f6-dcfd-4ce2-a5e2-c218b6fa250f
+    weight: 1
+    label: Contacts
+    id: view
