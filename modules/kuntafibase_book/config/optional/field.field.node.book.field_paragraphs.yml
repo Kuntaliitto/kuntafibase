@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.book
+  module:
+    - entity_reference_revisions
+id: node.book.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: book
+label: Liftup
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      contact:
+        weight: 11
+        enabled: false
+      gallery:
+        weight: 12
+        enabled: false
+      image:
+        weight: 13
+        enabled: false
+      instagram:
+        weight: 14
+        enabled: false
+      link:
+        weight: 15
+        enabled: false
+      pinterest:
+        weight: 16
+        enabled: false
+      quote:
+        weight: 17
+        enabled: false
+      text:
+        weight: 18
+        enabled: false
+      twitter:
+        weight: 19
+        enabled: false
+      video:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions
