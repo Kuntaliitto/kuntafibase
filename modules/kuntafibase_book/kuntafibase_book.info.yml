@@ -1,0 +1,7 @@
+name: 'kuntafibase book'
+type: module
+description: 'Create book with outline'
+core: 8.x
+package: 'Kuntafibase'
+dependencies:
+  - kuntafibase_core

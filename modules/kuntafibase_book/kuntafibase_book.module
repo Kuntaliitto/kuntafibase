@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains kuntafibase_book.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function kuntafibase_book_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntafibase_book module.
+    case 'help.page.kuntafibase_book':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Create book with outline') . '</p>';
+      return $output;
+
+    default:
+  }
+}

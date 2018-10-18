@@ -1,0 +1,14 @@
+{
+  "name": "drupal/kuntafibase_book",
+  "type": "drupal-module",
+  "description": "Create book with outline",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/kuntafibase_book",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/kuntafibase_book",
+    "source": "http://cgit.drupalcode.org/kuntafibase_book"
+  },
+  "require": { }
+}
