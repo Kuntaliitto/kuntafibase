@@ -1,0 +1,14 @@
+{
+  "name": "drupal/kuntafibase_now",
+  "type": "drupal-module",
+  "description": "Handle messaging and notifications for users",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/kuntafibase_now",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/kuntafibase_now",
+    "source": "http://cgit.drupalcode.org/kuntafibase_now"
+  },
+  "require": { }
+}

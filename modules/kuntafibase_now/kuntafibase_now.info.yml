@@ -1,0 +1,7 @@
+name: 'kuntafibase now'
+type: module
+description: 'Handle messaging and notifications for users'
+core: 8.x
+package: 'Kuntafibase'
+dependencies:
+  - kuntafibase_core

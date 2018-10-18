@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.now.field_link
+    - field.field.node.now.field_text
+    - node.type.now
+  module:
+    - link
+    - user
+id: node.now.default
+targetEntityType: node
+bundle: now
+mode: default
+content:
+  field_link:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  shariff_field: true
