@@ -3,3 +3,5 @@ type: module
 description: 'Basic page supporting paragraphs and menu'
 core: 8.x
 package: 'Kuntafibase'
+dependencies:
+  - kuntafibase_core

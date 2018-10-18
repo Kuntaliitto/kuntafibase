@@ -3,7 +3,7 @@ status: true
 dependencies:  
   enforced:
     module:
-      - kuntafibase_contact
+      - kuntafibase_contacts
   config:
     - node.type.contact
   module:

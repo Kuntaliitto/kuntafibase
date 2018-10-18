@@ -1,0 +1,14 @@
+{
+  "name": "drupal/kuntafibase_core",
+  "type": "drupal-module",
+  "description": "Core fields and taxonomies",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/kuntafibase_core",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/kuntafibase_core",
+    "source": "http://cgit.drupalcode.org/kuntafibase_core"
+  },
+  "require": { }
+}

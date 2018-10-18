@@ -5,3 +5,5 @@ core: 8.x
 package: 'Kuntafibase'
 dependencies:
   - paragraphs
+  - kuntafibase_core
+  - kuntafibase_contacts
