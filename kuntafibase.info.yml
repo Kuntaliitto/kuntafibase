@@ -24,6 +24,7 @@ dependencies:
   - facets
   - facets_summary
   - fb_instant_articles
+  - thunder_fia
   - hal
   - help
   - link_attributes

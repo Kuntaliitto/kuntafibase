@@ -4,7 +4,6 @@ description: 'Contact directory, AD people etc'
 core: 8.x
 dependencies:
   - kuntafibase_core
-  - kuntafibase_basic_article
   - empty_fields
   - entity_browser
   - field
