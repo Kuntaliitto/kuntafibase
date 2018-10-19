@@ -1,0 +1,14 @@
+{
+  "name": "drupal/kuntafibase_blog",
+  "type": "drupal-module",
+  "description": "Basic multiauthor blog",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/kuntafibase_blog",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/kuntafibase_blog",
+    "source": "http://cgit.drupalcode.org/kuntafibase_blog"
+  },
+  "require": { }
+}

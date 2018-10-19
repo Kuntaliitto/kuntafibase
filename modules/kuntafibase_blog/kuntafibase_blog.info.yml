@@ -1,0 +1,8 @@
+name: 'kuntafibase blog'
+type: module
+description: 'Basic multiauthor blog'
+core: 8.x
+package: 'Kuntafibase'
+dependencies:
+  - ajax_comments
+  - comments
