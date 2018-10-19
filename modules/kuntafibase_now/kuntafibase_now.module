@@ -5,6 +5,9 @@
  * Contains kuntafibase_now.module.
  */
 
+use Drupal\block\Entity\Block;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -20,6 +23,20 @@ function kuntafibase_now_help($route_name, RouteMatchInterface $route_match) {
       return $output;
 
     default:
+  }
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function kuntafibase_now_block_access(Block $block, $operation, AccountInterface $account) {
+  /** @var Drupal\block\Entity\Block $block */
+  if ((($block->id() == 'hidenowblock') || 
+      ($block->id() == 'views_block__now_now')) &&
+        ($operation == 'view')) {
+    if (isset($_SESSION['hide_now'])) {
+      return AccessResult::forbidden();
+    }
   }
 }
 

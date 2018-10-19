@@ -1,0 +1,6 @@
+.view--now { 
+    visibility: visible;
+    opacity: 1; }
+.view--now .is-hidden {
+    visibility: hidden;
+    opacity: 0; }

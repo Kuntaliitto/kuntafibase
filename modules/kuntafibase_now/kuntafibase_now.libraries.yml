@@ -1,0 +1,4 @@
+kuntafibase-now-styles:
+  css:
+    base:
+      css/kuntafibase-now.css: {}

@@ -5,3 +5,6 @@ core: 8.x
 package: 'Kuntafibase'
 dependencies:
   - kuntafibase_core
+  - link
+  - node
+  - user

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - kuntafibase_now
+  theme:
+    - thunder_base
+id: hidenowblock
+theme: thunder_base
+region: highlighted
+weight: 0
+provider: null
+plugin: hide_now_block
+settings:
+  id: hide_now_block
+  label: 'Hide now block'
+  provider: kuntafibase_now
+  label_display: '0'
+visibility: {  }
