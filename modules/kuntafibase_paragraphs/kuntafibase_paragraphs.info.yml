@@ -1,0 +1,11 @@
+name: 'kuntafibase paragraphs'
+type: module
+description: 'Paragraph types for kuntafibase'
+core: 8.x
+package: kuntafibase
+dependencies:
+  - node
+  - paragraphs
+  - taxonomy
+  - user
+  - views

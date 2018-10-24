@@ -1,0 +1,131 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - entity_browser.browser.taxonomy_terms
+  - field.field.paragraph.taxonomy.field_items_to_display
+  - field.field.paragraph.taxonomy.field_link
+  - field.field.paragraph.taxonomy.field_ref_taxonomy_term
+  - field.field.paragraph.taxonomy.field_sort_by
+  - field.field.paragraph.taxonomy.field_sort_direction
+  - field.field.paragraph.taxonomy.field_title
+  - paragraphs.paragraphs_type.taxonomy
+  module:
+  - entity_browser
+  - field_group
+  - link
+third_party_settings:
+  field_group:
+    group_links:
+      children:
+      - field_link
+      parent_name: group_settings
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Links
+    group_settings:
+      children:
+      - group_filter
+      - group_links
+      - group_visibility
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        label: Settings
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: Settings
+    group_visibility:
+      children:
+      - field_items_to_display
+      - field_sort_by
+      - field_sort_direction
+      parent_name: group_settings
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Visibility
+    group_filter:
+      children:
+      - field_ref_taxonomy_term
+      parent_name: group_settings
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Filter
+id: paragraph.taxonomy.default
+targetEntityType: paragraph
+bundle: taxonomy
+mode: default
+content:
+  field_items_to_display:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ref_taxonomy_term:
+    weight: 1
+    settings:
+      entity_browser: taxonomy_terms
+      field_widget_display: label
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_sort_by:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sort_direction:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

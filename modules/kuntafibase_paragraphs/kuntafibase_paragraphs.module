@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ * Contains kuntafibase_paragraphs.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\Views;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
+/**
+ * Implements hook_help().
+ */
+function kuntafibase_paragraphs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kuntafibase_paragraphs module.
+    case 'help.page.kuntafibase_paragraphs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Paragraph types for kuntafibase') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function kuntafibase_paragraphs_theme() {
+  return [
+    'kuntafibase_paragraphs' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for paragraph--taxonomy templates.
+ * 
+ * Required fields:
+ *  `field_items_to_display`
+ *  `field_ref_taxonomy_term`
+ *  `field_sort_by`
+ *  `field_sort_direction`
+ * 
+ *  Required views:
+ *  ``
+ */
+function kuntafibase_paragraphs_preprocess_paragraph__taxonomy(&$variables) {
+  /** @var Drupal\paragraphs\Entity\Paragraph $entity */
+  $entity = $variables['paragraph'];
+  //$tids = ['content_type' => [], 'tags' => []];
+  $tids = [
+    'tags' => []
+  ];
+  /*
+  foreach ($entity->get('field_content_type')->getValue() as $references => $record) {
+    $tids['content_type'][] = $record['target_id'];
+  }
+  */
+  foreach ($entity->get('field_ref_taxonomy_term')->getValue() as $references => $record) {
+    $tids['tags'][] = $record['target_id'];
+  }
+  $view = Views::getView('content_by_taxonomy_term');
+  $view->setItemsPerPage((integer) $entity->get('field_items_to_display')->getString());
+  $view->args = [
+    //implode('+', $tids['content_type']), implode(',', $tids['tags']),
+    implode(',', $tids['tags']),
+  ];
+  $view->setDisplay('default');
+  $view->preExecute();
+  $sort_by = $entity->get('field_sort_by');
+  $sort_direction = $entity->get('field_sort_direction');
+  if ($sort_by) {
+    if (isset($view->sort[$sort_by->value])) {
+      $sort_plugin = $view->sort[$sort_by->value];
+      unset($view->sort);
+      if ($sort_direction) {
+        if ($sort_direction->value) {
+          $sort_plugin->options['order'] = $sort_direction->value;
+        }
+      }
+      $view->sort[$sort_by->value] = $sort_plugin;
+    }
+  }
+  if ($view->execute()) {
+    $render = $view->buildRenderable();
+    $variables['content']['field_thematic_view'] = $render;
+  }
+}
+
+/**
+ * Implements hook_views_query_alter.
+ *
+ * Idea is to get rid of the current node id where the view is placed.
+ */
+function kuntafibase_paragraphs_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'content_by_taxonomy_term' && $view->current_display == 'default') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    // Filter out the nid from the arg.
+    //if ($node) {
+    //  $query->addWhere(0, 'nid', array((int)$node->id()), 'NOT IN'); //
+    //}
+  }
+}

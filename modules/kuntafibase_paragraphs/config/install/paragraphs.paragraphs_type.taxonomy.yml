@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: taxonomy
+label: 'Content by taxonomy term(s)'
+icon_uuid: null
+description: 'Create listings based on taxonomy term'
+behavior_plugins: {  }

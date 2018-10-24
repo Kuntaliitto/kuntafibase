@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - views.view.taxonomy_terms
+  module:
+  - views
+name: taxonomy_terms
+label: 'Taxonomy terms'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: Select
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  6def8429-b268-45c8-80eb-03d61746ba90:
+    settings:
+      view: taxonomy_terms
+      view_display: entity_browser_terms
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 6def8429-b268-45c8-80eb-03d61746ba90
+    weight: 1
+    label: view
+    id: view

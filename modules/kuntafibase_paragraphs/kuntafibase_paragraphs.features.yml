@@ -1,0 +1,3 @@
+bundle: kuntafibase
+required:
+  - views.view.content_by_taxonomy_term

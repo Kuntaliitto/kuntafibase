@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.paragraph.taxonomy.field_items_to_display
+  - field.field.paragraph.taxonomy.field_link
+  - field.field.paragraph.taxonomy.field_ref_taxonomy_term
+  - field.field.paragraph.taxonomy.field_sort_by
+  - field.field.paragraph.taxonomy.field_sort_direction
+  - field.field.paragraph.taxonomy.field_title
+  - paragraphs.paragraphs_type.taxonomy
+  module:
+  - link
+id: paragraph.taxonomy.default
+targetEntityType: paragraph
+bundle: taxonomy
+mode: default
+content:
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_items_to_display: true
+  field_ref_taxonomy_term: true
+  field_sort_by: true
+  field_sort_direction: true
