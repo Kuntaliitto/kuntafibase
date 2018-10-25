@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_items_to_display
+  - paragraphs.paragraphs_type.taxonomy
+id: paragraph.taxonomy.field_items_to_display
+field_name: field_items_to_display
+entity_type: paragraph
+bundle: taxonomy
+label: 'Items to display'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

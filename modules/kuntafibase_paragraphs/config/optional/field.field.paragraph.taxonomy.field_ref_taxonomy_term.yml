@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_ref_taxonomy_term
+  - paragraphs.paragraphs_type.taxonomy
+  - taxonomy.vocabulary.channel
+  - taxonomy.vocabulary.department
+  - taxonomy.vocabulary.division
+  - taxonomy.vocabulary.municipalities
+  - taxonomy.vocabulary.organization
+  - taxonomy.vocabulary.tags
+  - taxonomy.vocabulary.target_groups
+  - taxonomy.vocabulary.type
+id: paragraph.taxonomy.field_ref_taxonomy_term
+field_name: field_ref_taxonomy_term
+entity_type: paragraph
+bundle: taxonomy
+label: 'List content by taxonomy term'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      channel: channel
+      department: department
+      division: division
+      municipalities: municipalities
+      organization: organization
+      tags: tags
+      target_groups: target_groups
+      type: type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: channel
+field_type: entity_reference

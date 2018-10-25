@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.paragraph.field_sort_direction
+  - paragraphs.paragraphs_type.taxonomy
+  module:
+  - options
+id: paragraph.taxonomy.field_sort_direction
+field_name: field_sort_direction
+entity_type: paragraph
+bundle: taxonomy
+label: 'Sort direction'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
