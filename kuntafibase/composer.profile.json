@@ -59,7 +59,6 @@
     "drupal/swiftmailer": "^1.0@beta",
     "drupal/extlink": "^1.0",
     "drupal/eu_cookie_compliance": "^1.0@beta",
-    "drupal/config_installer": "^1.8",
     "drupal/default_content": "^1.0@alpha",
     "drupal/entity_usage": "2.0-alpha4"
   },
