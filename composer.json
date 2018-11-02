@@ -3,7 +3,7 @@
     "description": "Kuntafi base template build with Drupal 8",
     "type": "drupal-profile",
     "minimum-stability": "dev",
-    "prefer-stable": false,
+    "prefer-stable": true,
     "config": {
         "sort-packages": true,
         "bin-dir": "bin/"
