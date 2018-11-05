@@ -6,5 +6,5 @@ dependencies:
 id: comment.default_comments
 target_entity_type_id: comment
 target_bundle: default_comments
-default_langcode: current_interface
+default_langcode: site_default
 language_alterable: false

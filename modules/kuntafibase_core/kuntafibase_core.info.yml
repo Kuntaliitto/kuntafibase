@@ -1,9 +1,8 @@
 name: 'kuntafibase core'
 type: module
-description: 'Core fields and taxonomies'
+description: 'Core fields, workflow and taxonomies'
 core: 8.x
-package: 'Kuntafibase'
+package: kuntafibase
 dependencies:
   - comment
-  - link
   - scheduler_content_moderation_integration

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.default_comments
+    - field.storage.comment.field_email
+id: comment.default_comments.field_email
+field_name: field_email
+entity_type: comment
+bundle: default_comments
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

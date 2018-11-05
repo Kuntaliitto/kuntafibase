@@ -7,7 +7,9 @@ dependencies:
   - ajax_comments
   - comment
   - content_translation
+  - field
   - kuntafibase_basic_article
   - kuntafibase_contacts
   - language
   - simple_sitemap
+  - text
