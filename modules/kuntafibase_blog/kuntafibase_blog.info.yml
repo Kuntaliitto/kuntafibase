@@ -2,7 +2,12 @@ name: 'kuntafibase blog'
 type: module
 description: 'Basic multiauthor blog'
 core: 8.x
-package: 'Kuntafibase'
+package: kuntafibase
 dependencies:
   - ajax_comments
   - comment
+  - content_translation
+  - kuntafibase_basic_article
+  - kuntafibase_contacts
+  - language
+  - simple_sitemap

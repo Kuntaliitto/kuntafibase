@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.blog_post
+    - taxonomy.vocabulary.blog_tags
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-id: node.blog_post
-target_entity_type_id: node
-target_bundle: blog_post
+id: taxonomy_term.blog_tags
+target_entity_type_id: taxonomy_term
+target_bundle: blog_tags
 default_langcode: current_interface
 language_alterable: true

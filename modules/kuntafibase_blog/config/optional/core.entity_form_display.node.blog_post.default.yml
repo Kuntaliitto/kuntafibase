@@ -19,7 +19,10 @@ dependencies:
     - field_group
     - path
     - scheduler
+    - scheduler_content_moderation_integration
+    - select2
     - text
+    - thunder
 third_party_settings:
   field_group:
     group_basis:
@@ -89,38 +92,38 @@ content:
   field_blog:
     weight: 21
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: select2_entity_reference
     region: content
   field_blog_author:
     weight: 22
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_blog_tags:
     weight: 23
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     region: content
   field_channel:
     weight: 19
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: select2_entity_reference
     region: content
   field_comments:
     weight: 15
@@ -131,11 +134,11 @@ content:
   field_municipalities:
     weight: 20
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: select2_entity_reference
     region: content
   field_seo_title:
     weight: 3
@@ -162,20 +165,20 @@ content:
   field_tags:
     weight: 18
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: select2_entity_reference
     region: content
   field_target_groups:
     weight: 21
     settings:
+      width: 100%
+      autocomplete: true
       match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: select2_entity_reference
     region: content
   langcode:
     type: language_select
@@ -183,6 +186,12 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: thunder_moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path
@@ -200,6 +209,12 @@ content:
   publish_on:
     type: datetime_timestamp_no_default
     weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -247,6 +262,12 @@ content:
   unpublish_on:
     type: datetime_timestamp_no_default
     weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
