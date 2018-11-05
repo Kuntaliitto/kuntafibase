@@ -1,13 +1,13 @@
 langcode: en
 status: true
-dependencies:  
-  enforced:
-    module:
-      - kuntafibase_basic_page
+dependencies:
   config:
     - field.storage.node.field_channel
     - node.type.basic_page
     - taxonomy.vocabulary.channel
+  enforced:
+    module:
+      - kuntafibase_basic_page
 id: node.basic_page.field_channel
 field_name: field_channel
 entity_type: node

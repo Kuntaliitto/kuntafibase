@@ -1,13 +1,13 @@
 langcode: en
 status: true
-dependencies:  
-  enforced:
-    module:
-      - kuntafibase_basic_page
+dependencies:
   config:
     - field.storage.node.field_municipalities
     - node.type.basic_page
     - taxonomy.vocabulary.municipalities
+  enforced:
+    module:
+      - kuntafibase_basic_page
 id: node.basic_page.field_municipalities
 field_name: field_municipalities
 entity_type: node

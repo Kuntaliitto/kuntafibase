@@ -2,6 +2,25 @@ name: 'kuntafibase basic page'
 type: module
 description: 'Basic page supporting paragraphs and menu'
 core: 8.x
-package: 'Kuntafibase'
+package: kuntafibase
 dependencies:
+  - allowed_formats
+  - content_translation
+  - entity_reference_revisions
+  - field
+  - field_group
+  - kuntafibase_basic_article
+  - kuntafibase_contacts
   - kuntafibase_core
+  - language
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - scheduler
+  - scheduler_content_moderation_integration
+  - select2
+  - simple_sitemap
+  - text
+  - thunder
+  - user

@@ -1,13 +1,13 @@
 langcode: en
 status: true
-dependencies:  
-  enforced:
-    module:
-      - kuntafibase_basic_page
+dependencies:
   config:
     - field.storage.node.field_target_groups
     - node.type.basic_page
     - taxonomy.vocabulary.target_groups
+  enforced:
+    module:
+      - kuntafibase_basic_page
 id: node.basic_page.field_target_groups
 field_name: field_target_groups
 entity_type: node
