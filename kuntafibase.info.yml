@@ -2,20 +2,16 @@ name: Kuntafibase
 type: profile
 description: 'The Drupal 8 pohjainen sisällönhallintajärjestelmä (CMS) kunnille, maakunnille ja sote-kuntayhtymille'
 core: 8.x
+version: 8.x-6.x-dev
 package: Kuntafibase
-distribution:
-  name: Kuntafibase
 
-base profile:
-  name: thunder
+base profile: thunder
 
-dependencies:
+install:
   - kuntafibase_core
   - action
   - allowed_formats
   - better_exposed_filters
-  - chosen
-  - chosen_lib
   - config_translation
   - content_translation
   - datetime_range
