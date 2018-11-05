@@ -31,6 +31,7 @@
     ],
     "require": {        
         "wikimedia/composer-merge-plugin": "^1.4.1",
+        "drupal/entity": "1.0-rc1",
         "drupal/allowed_formats": "1.x-dev",
         "drupal/better_exposed_filters": "^3.0",
         "drupal/embed": "~1.0",
