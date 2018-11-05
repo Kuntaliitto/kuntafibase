@@ -4,6 +4,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.book.body
+    - field.field.node.book.field_channel
+    - field.field.node.book.field_contact
+    - field.field.node.book.field_municipalities
+    - field.field.node.book.field_paragraphs
+    - field.field.node.book.field_seo_title
+    - field.field.node.book.field_subtitle
+    - field.field.node.book.field_tags
+    - field.field.node.book.field_target_groups
     - node.type.book
   module:
     - text
@@ -24,6 +32,16 @@ content:
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_channel: true
+  field_contact: true
+  field_municipalities: true
+  field_paragraphs: true
+  field_seo_title: true
+  field_subtitle: true
+  field_tags: true
+  field_target_groups: true
   langcode: true
   shariff_field: true

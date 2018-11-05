@@ -2,6 +2,10 @@ name: 'kuntafibase book'
 type: module
 description: 'Create book with outline'
 core: 8.x
-package: 'Kuntafibase'
+package: kuntafibase
 dependencies:
+  - book
+  - kuntafibase_basic_article
+  - kuntafibase_contacts
   - kuntafibase_core
+  - simple_sitemap
