@@ -2,8 +2,12 @@ name: 'kuntafibase basic article'
 type: module
 description: 'Basic article supporting multichannel and multitype content'
 core: 8.x
-package: 'Kuntafibase'
+package: kuntafibase
 dependencies:
-  - paragraphs
-  - kuntafibase_core
+  - field
   - kuntafibase_contacts
+  - kuntafibase_core
+  - node
+  - paragraphs
+  - simple_sitemap
+  - text

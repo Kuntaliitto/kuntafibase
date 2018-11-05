@@ -1,11 +1,11 @@
 langcode: en
 status: true
-dependencies:  
+dependencies:
+  config:
+    - node.type.basic_article
   enforced:
     module:
       - kuntafibase_basic_article
-  config:
-    - node.type.basic_article
   module:
     - content_translation
 third_party_settings:
