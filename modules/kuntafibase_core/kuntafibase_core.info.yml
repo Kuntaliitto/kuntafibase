@@ -4,5 +4,12 @@ description: 'Core fields, workflow and taxonomies'
 core: 8.x
 package: kuntafibase
 dependencies:
+  - access_unpublished
   - comment
+  - file
+  - kuntafibase_basic_page
+  - node
   - scheduler_content_moderation_integration
+  - thunder_updater
+  - user
+version: 8.x-1.0
