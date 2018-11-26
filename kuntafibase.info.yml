@@ -17,6 +17,8 @@ install:
   - datetime_range
   - embed
   - entity_embed
+  - entity_browser_entity_form
+  - inline_entity_form
   - facets
   - facets_summary
   - fb_instant_articles
@@ -29,3 +31,7 @@ install:
   - rest
   - serialization
   - update
+themes:
+  - seven
+  - thunder_base
+  - thunder_admin

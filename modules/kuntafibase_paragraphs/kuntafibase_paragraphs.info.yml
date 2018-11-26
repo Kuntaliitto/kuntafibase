@@ -2,7 +2,7 @@ name: 'kuntafibase paragraphs'
 type: module
 description: 'Paragraph types for kuntafibase'
 core: 8.x
-package: kuntafibase
+package: 'Kuntafibase'
 dependencies:
   - node
   - paragraphs

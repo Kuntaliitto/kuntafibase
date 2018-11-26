@@ -4,6 +4,13 @@ description: 'Contact directory, AD people etc'
 core: 8.x
 dependencies:
   - kuntafibase_core
+  - length_indicator
+  - path
+  - scheduler
+  - menu_ui
+  - media_entity
+  - media_entity_image
+  - thunder_media
   - empty_fields
   - entity_browser
   - field
