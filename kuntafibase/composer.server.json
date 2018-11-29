@@ -12,8 +12,6 @@
     "drupal/memcache": "^2.0@alpha",
     "drupal/ultimate_cron": "^2.0@alpha",
     "drupal/imagemagick": "^1.0@alpha",
-    "drush/drush": "^8.1",
-    "drupal/console": "~1.0",
     "wunderio/drupal-ping": "^1.0"
   },
   "extra": {

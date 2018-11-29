@@ -29,8 +29,16 @@
             "url": "https://asset-packagist.org"
         }
     ],
-    "require": {        
-        "wikimedia/composer-merge-plugin": "^1.4.1"
+    "require": {
+        "wikimedia/composer-merge-plugin": "^1.4.1",
+        "composer/installers": "^1.5.0",
+        "oomphinc/composer-installers-extender": "^1.1.2",
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "webflo/drupal-finder": "^1.1.0",
+        "webmozart/path-util": "^2.3.0",
+        "cweagans/composer-patches": "^1.6.4",
+        "burdamagazinorg/thunder": "8.2.29",
+        "drupal/entity": "1.0-rc1"
     },
     "require-dev": {},
     "extra": {
@@ -75,6 +83,32 @@
             "merge-scripts": true,
             "replace": false,
             "ignore-duplicates": true
+        },
+        "enable-patching": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "Allow profiles to provide a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.x.patch",
+                "Allow install profile disable": "https://www.drupal.org/files/issues/install-profile-1170362-235.patch",
+                "Make entity reference work with views": "https://www.drupal.org/files/issues/2174633-174.patch",
+                "More link disappears when time-based views cache is enabled": "https://www.drupal.org/files/issues/more_link_disappears-1819538-24.patch",
+                "Limiting options for exposed Language filters": "https://www.drupal.org/files/issues/drupal-exposed-language-filter-errors-2693727-1.patch",
+                "Allow redirects": "https://www.drupal.org/files/issues/2643466-10.patch",
+                "Path alias filter by system path": "https://www.drupal.org/files/issues/2018-03-24/path_alias_filter_by-2418755-69.patch",
+                "Make Book navigation translatable": "https://www.drupal.org/files/issues/book-navigation-translatable-2470896-26.patch"
+            },
+            "drupal/ctools": {
+                "Autosubmit for view filters": "https://www.drupal.org/files/issues/2475595-ctools-autocomplete-fix-24.patch",
+                "Block.php notices and warnings": "https://www.drupal.org/files/issues/fixblockpager-2820783-21.patch"
+            },
+            "drupal/inline_responsive_images": {
+                "Two validation callbacks fired": "https://www.drupal.org/files/issues/inline_responsive_images-validator-fix-2830261-2.patch"
+            },
+            "drupal/inline_entity_form": {
+                "Add entity reference in translation": "https://www.drupal.org/files/issues/2018-06-21/inline_entity_form-support_adding_new_entities_when_translating-2822764-32.patch"
+            }
         }
     },
     "replace": {
