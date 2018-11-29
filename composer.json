@@ -46,7 +46,7 @@
         "drupal/search_api": "^1",
         "drupal/menu_block": "^1.4",
         "drupal/inline_entity_form": "1.0-rc1",
-        "drupal/linkit": "5.0.0-beta7 as 4.0",
+        "drupal/linkit:^5.0",
         "drupal/url_embed": "1.x-dev",
         "drupal/search_api_solr": "^1",
         "drupal/better_exposed_filters": "^3",
