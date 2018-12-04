@@ -197,3 +197,17 @@ drush en kuntafibase_core kuntafibase_basic_article kuntafibase_contacts, kuntaf
 ```
 drush en kuntafibase_now kuntafibase_paragraphs kuntafibase_blog kuntafibase_book -y
 ```
+
+### Local development
+
+Development will happen in your `ProjectToWorkWith` folder. You need local development environment to install/test/configure the project. 
+
+We have successfully used [Drupal4Docker](https://wodby.com/docs/stacks/drupal/local/), but you are free to use other tools like [DDEV](https://dev.acquia.com/blog/blt-and-ddev-together).
+
+### Deployments
+
+Acquia BLT can create a deployment artifact of your local project to separate production repository.
+
+Platform.sh has few yml -files to add into `ProjectToWorkWith`folder enabling deployments into their cloud.
+
+We have successfully created also Azure App Service -based image to run code in Azure.
