@@ -39,6 +39,10 @@ Add `KuntafiBase` as dependency
 composer require kuntaliitto/kuntafibase:8.x.6.x-dev
 ```
 
+Run composer install
+```
+composer install
+```
 
 
 ## What does the template do?
