@@ -9,7 +9,7 @@
     "drupal/purge": "^3",
     "drupal/varnish_purge": "1.11",
     "drupal/warden": "^1.0",
-    "drupal/memcache": "^2.0@alpha",
+    "drupal/redis": "^1.1",
     "drupal/ultimate_cron": "^2.0@alpha",
     "drupal/imagemagick": "^1.0@alpha",
     "wunderio/drupal-ping": "^1.0"
