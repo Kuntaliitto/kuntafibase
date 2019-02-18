@@ -144,7 +144,7 @@
             },
             "drupal/ctools": {
                 "Autosubmit for view filters": "https://www.drupal.org/files/issues/2475595-ctools-autocomplete-fix-24.patch",
-                "Block.php notices and warnings": "https://www.drupal.org/files/issues/fixblockpager-2820783-21.patch"
+                "Block.php notices and warnings": "https://www.drupal.org/files/issues/2019-02-11/ctools-Block.php_notices_and_warnings-2820783-48-D8.patch"
             },
             "drupal/inline_responsive_images": {
                 "Two validation callbacks fired": "https://www.drupal.org/files/issues/inline_responsive_images-validator-fix-2830261-2.patch"
