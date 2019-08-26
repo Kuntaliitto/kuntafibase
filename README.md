@@ -1,6 +1,11 @@
-# Composer based Thunder installation
+# Thunder based KuntaFi installation
 
 This project template should provide a kickstart for managing your site dependencies with [Composer](https://getcomposer.org/).
+
+```
+composer install
+composer drupal:scaffold
+```
 
 ## Usage
 
@@ -15,6 +20,7 @@ When installing the given `composer.json` some tasks are taken care of:
 * Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`,
   instead of the one provided by Drupal (`docroot/vendor/autoload.php`).
 * Modules (packages of type `drupal-module`) will be placed in `docroot/modules/contrib/`
+* Custom modules (packages of type `drupal-module-custom`) will be places in `docroot/modules/custom/`
 * Theme (packages of type `drupal-theme`) will be placed in `docroot/themes/contrib/`
 * Profiles (packages of type `drupal-profile`) will be placed in `docroot/profiles/contrib/`
 * Downloads Drupal scaffold files such as `index.php`, or `.htaccess`
@@ -102,3 +108,30 @@ To prevent downloading a module, that Thunder provides but that you do not need,
 ```
 
 This example prevents any version of the feature module to be downloaded.
+
+### Extending
+
+Minimum requirements for KuntaFi base packages can be installed
+
+```
+composer require kuntaliitto/kuntafibase_core --prefer-source
+composer require kuntaliitto/kuntafibase_basic_page --prefer-source
+composer require kuntaliitto/kuntafibase_basic_article --prefer-source
+composer require kuntaliitto/kuntafibase_blog --prefer-source
+composer require kuntaliitto/kuntafibase_book --prefer-source
+composer require kuntaliitto/kuntafibase_contacts --prefer-source
+composer require kuntaliitto/kuntafibase_now --prefer-source
+composer require kuntaliitto/kuntafibase_paragraphs --prefer-source
+composer require "drupal/allowed_formats":"1.x-dev"
+composer require "drupal/ajax_comments":"1.0-beta2"
+```
+
+### Export configuration
+
+To make pull request the configuration needs to be written into modules optional configuration. We use drupal consoles help.
+
+```
+drupal cect basic_article --module="kuntafibase_basic_article" --optional-config --remove-uuid --remove-config
+-hash
+```
+The export will add some fields and taxonomies to the export and they are not needed because they are general and they are added by the ```kuntafibase_core``` module. Example taxonomy channel, municipalities, type are not needed anymore and therefore you need to clean before doing the PR.
