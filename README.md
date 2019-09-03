@@ -133,5 +133,6 @@ To make pull request the configuration needs to be written into modules optional
 ```
 drupal cect basic_article --module="kuntafibase_basic_article" --optional-config --remove-uuid --remove-config
 -hash
+drupal config:export --directory="modules/custom/kuntafibase_core" --remove-uuid --remove-config-hash
 ```
 The export will add some fields and taxonomies to the export and they are not needed because they are general and they are added by the ```kuntafibase_core``` module. Example taxonomy channel, municipalities, type are not needed anymore and therefore you need to clean before doing the PR.
