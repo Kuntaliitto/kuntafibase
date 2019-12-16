@@ -10,7 +10,7 @@ composer drupal:scaffold
 ## Usage
 
 See our [install documentation](https://thunder.github.io/thunder-documentation/quick-install) on how to use Thunder project.
-We also have documentation on [extending](https://thunder.github.io/thunder-documentation/extending) and [updating](https://thunder.github.io/thunder-documentation/updating) Thunder sites. 
+We also have documentation on [extending](https://thunder.github.io/thunder-documentation/quick-install#install-extend) and [updating](https://thunder.github.io/thunder-documentation/quick-install#install-update) Thunder sites. 
 
 ## What does the template do?
 
@@ -20,7 +20,6 @@ When installing the given `composer.json` some tasks are taken care of:
 * Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`,
   instead of the one provided by Drupal (`docroot/vendor/autoload.php`).
 * Modules (packages of type `drupal-module`) will be placed in `docroot/modules/contrib/`
-* Custom modules (packages of type `drupal-module-custom`) will be places in `docroot/modules/custom/`
 * Theme (packages of type `drupal-theme`) will be placed in `docroot/themes/contrib/`
 * Profiles (packages of type `drupal-profile`) will be placed in `docroot/profiles/contrib/`
 * Downloads Drupal scaffold files such as `index.php`, or `.htaccess`
