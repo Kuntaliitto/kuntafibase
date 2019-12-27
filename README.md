@@ -10,7 +10,7 @@ composer drupal:scaffold
 ## Usage
 
 See our [install documentation](https://thunder.github.io/thunder-documentation/quick-install) on how to use Thunder project.
-We also have documentation on [extending](https://thunder.github.io/thunder-documentation/extending) and [updating](https://thunder.github.io/thunder-documentation/updating) Thunder sites. 
+We also have documentation on [extending](https://thunder.github.io/thunder-documentation/quick-install#install-extend) and [updating](https://thunder.github.io/thunder-documentation/quick-install#install-update) Thunder sites. 
 
 ## What does the template do?
 
@@ -20,7 +20,6 @@ When installing the given `composer.json` some tasks are taken care of:
 * Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`,
   instead of the one provided by Drupal (`docroot/vendor/autoload.php`).
 * Modules (packages of type `drupal-module`) will be placed in `docroot/modules/contrib/`
-* Custom modules (packages of type `drupal-module-custom`) will be places in `docroot/modules/custom/`
 * Theme (packages of type `drupal-theme`) will be placed in `docroot/themes/contrib/`
 * Profiles (packages of type `drupal-profile`) will be placed in `docroot/profiles/contrib/`
 * Downloads Drupal scaffold files such as `index.php`, or `.htaccess`
@@ -131,10 +130,10 @@ composer require "drupal/ajax_comments":"1.0-beta2"
 To make pull request the configuration needs to be written into modules optional configuration. We use drupal consoles help.
 
 ```
-drupal cect basic_article --module="kuntafibase_basic_article" --optional-config --remove-uuid --remove-config-hash
+drupal cect basic_article --module="kuntafibase_basic_article" --optional-config --remove-uuid --remove-config
+-hash
 drupal config:export --directory="modules/custom/kuntafibase_core" --remove-uuid --remove-config-hash
 ```
-
 The export will add some fields and taxonomies to the export and they are not needed because they are general and they are added by the ```kuntafibase_core``` module. Example taxonomy channel, municipalities, type are not needed anymore and therefore you need to clean before doing the PR.
 
 ### Import custom module configuration

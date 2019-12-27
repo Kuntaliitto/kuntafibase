@@ -25,7 +25,6 @@ endif
 up:
 	@echo "Starting up containers for $(PROJECT_NAME)..."
 	docker-compose pull
-##	docker-sync start
 	docker-compose up -d --remove-orphans
 
 ## down	:	Stop containers.
