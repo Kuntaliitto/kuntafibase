@@ -131,7 +131,17 @@ composer require "drupal/ajax_comments":"1.0-beta2"
 To make pull request the configuration needs to be written into modules optional configuration. We use drupal consoles help.
 
 ```
-drupal cect basic_article --module="kuntafibase_basic_article" --optional-config --remove-uuid --remove-config
--hash
+drupal cect basic_article --module="kuntafibase_basic_article" --optional-config --remove-uuid --remove-config-hash
+drupal config:export --directory="modules/custom/kuntafibase_core" --remove-uuid --remove-config-hash
 ```
+
 The export will add some fields and taxonomies to the export and they are not needed because they are general and they are added by the ```kuntafibase_core``` module. Example taxonomy channel, municipalities, type are not needed anymore and therefore you need to clean before doing the PR.
+
+### Import custom module configuration
+
+Module configuration is installed only once while installation. Updating the ```kuntafibase_***```configuration can be done by drush:
+
+```
+drush cim --partial --source=modules/custom/kuntafibase_<***>/config/optional/
+````
+where `***` is subtituted by the modulename
